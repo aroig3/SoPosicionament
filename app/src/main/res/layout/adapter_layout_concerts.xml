@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="450dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="265dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titoldata"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="#86a99c"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="QUAN ÉS EL CONCERT?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <TextView
+                android:id="@+id/data"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="-----"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <TextView
+                android:id="@+id/titolubi"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="#86a99c"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="A ON ÉS EL CONCERT?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <TextView
+                android:id="@+id/ubi"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:text="-----"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/miki_portada" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
