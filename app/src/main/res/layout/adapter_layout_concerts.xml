@@ -74,7 +74,7 @@
                 android:textSize="18sp" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imllista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/miki_portada" />

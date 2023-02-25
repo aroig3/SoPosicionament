@@ -52,10 +52,10 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/botoVolum"
                 android:layout_width="165dp"
                 android:layout_height="143dp"
-                app:srcCompat="@drawable/encendreSo" />
+                app:srcCompat="@drawable/encendre_so" />
 
             <Space
                 android:layout_width="307dp"
@@ -78,10 +78,10 @@
                 android:layout_weight="1" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/botomenysVolum"
                 android:layout_width="165dp"
                 android:layout_height="143dp"
-                app:srcCompat="@drawable/apagarSo" />
+                app:srcCompat="@drawable/apagar_so" />
 
             <Space
                 android:layout_width="307dp"

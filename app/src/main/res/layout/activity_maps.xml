@@ -6,15 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".LlistaConcerts">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:id="@+id/maps"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_contraintRight_toRightOf="parent"
-        app:layout_constrintTop_toTopOf="parent"
-        android:name="com.google.android.gms.maps.SupportMapFragment">
-    </androidx.fragment.app.FragmentContainerView>
 
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="315dp"
+        android:layout_height="431dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

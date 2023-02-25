@@ -1,22 +1,16 @@
 package com.example.soposicionament;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.w3c.dom.Text;
-
-import java.util.List;
 
 public class Adapter_concerts extends RecyclerView.Adapter<Adapter_concerts.ViewHolder> {
 
@@ -46,6 +40,7 @@ public class Adapter_concerts extends RecyclerView.Adapter<Adapter_concerts.View
         final Concert concertList = concert[position];
         holder.data.setText(concertList.getData());
         holder.ubicacio.setText(concertList.getUbicacio());
+        holder.imatge.setImageResource(concertList.getImatge());
 
 
     }
@@ -59,24 +54,25 @@ public class Adapter_concerts extends RecyclerView.Adapter<Adapter_concerts.View
 
         TextView data;
         TextView ubicacio;
+        ImageView imatge;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             data = itemView.findViewById(R.id.data);
             ubicacio = itemView.findViewById(R.id.ubi);
+            imatge = itemView.findViewById(R.id.imllista);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    url = "https://mikinunez.com/";
-                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                    //startActivity(intent);
+                    Uri uri = Uri.parse("https://mikinunez.com/");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    v.getContext().startActivity(intent);
                 }
             });
-
         }
 
-    }
 
+    }
 }

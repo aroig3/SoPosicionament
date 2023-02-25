@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -17,24 +18,36 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     GestureDetector mGestureDetector;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mGestureDetector = new GestureDetector(this, new GestureListener());
-
+        MediaPlayer soBotons = MediaPlayer.create(this, R.raw.sobotons);
 
         //recuparem dades
         Button btEntrada = (Button) findViewById(R.id.btEntrada);
         Button btMaps = (Button) findViewById(R.id.btMaps);
         Button btConf = (Button) findViewById(R.id.btConf);
 
+        btConf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                soBotons.start();
+                Intent intent = new Intent( MainActivity.this, Configuracio.class);
+                startActivity(intent);
+            }
+        });
+
 
         //ACCIÓ AL FER CLICK AL BOTO DE COMENÇAR
         btEntrada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                soBotons.start();
                 Intent intent = new Intent( MainActivity.this, LlistaConcerts.class);
                 startActivity(intent);
             }
@@ -43,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                soBotons.start();
                 Intent intent = new Intent( MainActivity.this, MapsActivity.class);
                 startActivity(intent);
             }
