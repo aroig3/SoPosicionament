@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Button btEntrada = (Button) findViewById(R.id.btEntrada);
         Button btMaps = (Button) findViewById(R.id.btMaps);
         Button btConf = (Button) findViewById(R.id.btConf);
-
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.musica);
+        mediaPlayer.stop();
         btConf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
